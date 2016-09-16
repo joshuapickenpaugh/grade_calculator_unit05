@@ -34,7 +34,7 @@ Partial Class frmMain
         '
         Me.txtNumAssignments.Location = New System.Drawing.Point(12, 28)
         Me.txtNumAssignments.Name = "txtNumAssignments"
-        Me.txtNumAssignments.Size = New System.Drawing.Size(196, 20)
+        Me.txtNumAssignments.Size = New System.Drawing.Size(297, 20)
         Me.txtNumAssignments.TabIndex = 1
         Me.txtNumAssignments.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -43,7 +43,7 @@ Partial Class frmMain
         Me.btnEnterGrades.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEnterGrades.Location = New System.Drawing.Point(12, 52)
         Me.btnEnterGrades.Name = "btnEnterGrades"
-        Me.btnEnterGrades.Size = New System.Drawing.Size(196, 40)
+        Me.btnEnterGrades.Size = New System.Drawing.Size(297, 40)
         Me.btnEnterGrades.TabIndex = 2
         Me.btnEnterGrades.Text = "&Enter Grades"
         Me.btnEnterGrades.UseVisualStyleBackColor = True
@@ -52,7 +52,7 @@ Partial Class frmMain
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(51, 11)
+        Me.Label1.Location = New System.Drawing.Point(102, 11)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(118, 13)
         Me.Label1.TabIndex = 0
@@ -62,7 +62,7 @@ Partial Class frmMain
         '
         Me.btnExit.Location = New System.Drawing.Point(13, 242)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(196, 33)
+        Me.btnExit.Size = New System.Drawing.Size(297, 33)
         Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "E&xit"
         Me.btnExit.UseVisualStyleBackColor = True
@@ -73,7 +73,7 @@ Partial Class frmMain
         Me.lblFinalGrade.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFinalGrade.Location = New System.Drawing.Point(12, 96)
         Me.lblFinalGrade.Name = "lblFinalGrade"
-        Me.lblFinalGrade.Size = New System.Drawing.Size(196, 105)
+        Me.lblFinalGrade.Size = New System.Drawing.Size(297, 105)
         Me.lblFinalGrade.TabIndex = 5
         Me.lblFinalGrade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -81,7 +81,7 @@ Partial Class frmMain
         '
         Me.btnClear.Location = New System.Drawing.Point(13, 205)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(196, 33)
+        Me.btnClear.Size = New System.Drawing.Size(297, 33)
         Me.btnClear.TabIndex = 3
         Me.btnClear.Text = "&Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -90,7 +90,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(220, 286)
+        Me.ClientSize = New System.Drawing.Size(322, 286)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.lblFinalGrade)
         Me.Controls.Add(Me.btnExit)
