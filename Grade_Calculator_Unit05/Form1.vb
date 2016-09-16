@@ -17,31 +17,41 @@ Public Class frmMain
 
         'Declares variables:
         Dim intNumAssignments As Integer
-        Dim dblSingleAssignmentGrade As Double
         Dim dblTotalAssignmentGrade As Double
-        'Dim intTotalAssignmentGrade As Integer
-        Dim intCounter As Integer = 0
 
         'Gets number of assignments:
         Integer.TryParse(txtNumAssignments.Text, intNumAssignments)
 
-        'prompts user to enter grade for each assignment in an inputbox, 
-        'adds all grades together:
-        Do While (intCounter < intNumAssignments)
-            dblSingleAssignmentGrade = InputBox("Individual Grades",
-                                                "Enter individual grade:")
-            dblTotalAssignmentGrade = dblTotalAssignmentGrade + dblSingleAssignmentGrade
-            intCounter = intCounter + 1
-        Loop
-
-        'Caculates average grade:
-        dblTotalAssignmentGrade = dblTotalAssignmentGrade / intNumAssignments
-        dblTotalAssignmentGrade = dblTotalAssignmentGrade.ToString("N1")
+        'Calls function to prompt user for individual grades and calculates 
+        'average grade:
+        dblTotalAssignmentGrade = PromptUserAndGetAverageGrade(intNumAssignments)
 
         'Calls sub procedure to process letter grade, print result:
         Call ProcessLetterGrade(dblTotalAssignmentGrade)
 
     End Sub
+
+    Private Function PromptUserAndGetAverageGrade(ByVal intNA As Integer) As Double
+
+        Dim intCounter As Integer = 0
+        Dim dblSingleAssignmentGrade As Double
+        Dim dblTotalAssignmentGradeInFunction As Double
+
+        'prompts user to enter grade for each assignment in an inputbox, 
+        'adds all grades together:
+        Do While (intCounter < intNA)
+            dblSingleAssignmentGrade = InputBox("Individual Grades",
+                                    "Enter individual grade:")
+            dblTotalAssignmentGradeInFunction = dblTotalAssignmentGradeInFunction + dblSingleAssignmentGrade
+            intCounter = intCounter + 1
+        Loop
+
+        'Caculates average grade:
+        dblTotalAssignmentGradeInFunction = dblTotalAssignmentGradeInFunction / intNA
+        dblTotalAssignmentGradeInFunction = dblTotalAssignmentGradeInFunction.ToString("N1")
+        Return dblTotalAssignmentGradeInFunction
+
+    End Function
     Private Sub ProcessLetterGrade(ByVal dblTAG As Double)
 
         'Process letter grade, prints result in label control:
