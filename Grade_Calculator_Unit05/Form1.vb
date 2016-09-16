@@ -1,4 +1,8 @@
-﻿Public Class frmMain
+﻿' Joshua Pickenpaugh
+' September 16th, 2016
+' "Grade Calculator", Unit 5 Project, CPT 432
+
+Public Class frmMain
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
 
         'Closes the app:
@@ -15,6 +19,7 @@
         Dim intNumAssignments As Integer
         Dim dblSingleAssignmentGrade As Double
         Dim dblTotalAssignmentGrade As Double
+        'Dim intTotalAssignmentGrade As Integer
         Dim intCounter As Integer = 0
 
         'Gets number of assignments:
@@ -33,15 +38,21 @@
         dblTotalAssignmentGrade = dblTotalAssignmentGrade / intNumAssignments
         dblTotalAssignmentGrade = dblTotalAssignmentGrade.ToString("N1")
 
+        'Calls sub procedure to process letter grade, print result:
+        Call ProcessLetterGrade(dblTotalAssignmentGrade)
+
+    End Sub
+    Private Sub ProcessLetterGrade(ByVal dblTAG As Double)
+
         'Process letter grade, prints result in label control:
-        Select Case dblTotalAssignmentGrade
+        Select Case dblTAG
             Case 90 To 100
                 lblFinalGrade.Text = "The final letter grade is: A"
             Case 80 To 89.9
                 lblFinalGrade.Text = "The final letter grade is: B"
-            Case 70 To 70.9
+            Case 70 To 79.9
                 lblFinalGrade.Text = "The final letter grade is: C"
-            Case 60 To 60.9
+            Case 60 To 69.9
                 lblFinalGrade.Text = "The final letter grade is: D"
             Case < 60
                 lblFinalGrade.Text = "You failed this class with a grade of: F"
@@ -64,6 +75,9 @@
         'Clears the text boxes and labels for another entry:
         txtNumAssignments.Text = ""
         lblFinalGrade.Text = ""
+
+        'Sets focus back on the text box:
+        txtNumAssignments.Focus()
 
     End Sub
 End Class
